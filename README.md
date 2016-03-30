@@ -1,7 +1,7 @@
-# ocaml-cordova-plugin-screen-orientation-example
+# ocaml-cordova-plugin-dialogs-example
 
-This is an example of the binding to the *screen orientation cordova plugin*. See the
-binding [here](https://github.com/dannywillems/ocaml-cordova-plugin-screen-orientation)
+This is an example of the binding to the *dialogs cordova plugin*. See the
+binding [here](https://github.com/dannywillems/ocaml-cordova-plugin-dialogs)
 
 ## How to compile ?
 
@@ -62,7 +62,7 @@ Web-based (because they are not just Web apps, but are packaged as apps for
 distribution and have access to native device APIs).
 ```
 
-## Using js_of_ocaml to develop in OCaml on mobile
+## Using js_of_ocaml and gen_js_api to develop in OCaml on mobile
 
 js_of_ocaml allows you to compile ml files into javascript files. With this
 compiler, you can use OCaml to develop hybrid mobile application.
@@ -70,6 +70,9 @@ compiler, you can use OCaml to develop hybrid mobile application.
 You need to install [ocaml](http://ocaml.org/), [opam](https://opam.ocaml.org/)
 and js_of_ocaml (with opam). You also need to install cordova (see
 [here](https://cordova.apache.org/docs/en/4.0.0/guide/cli/).
+
+You also need [gen_js_api](https://github.com/lexifi/gen_js_api). Read the
+install and use section.
 
 ## Project structure
 
@@ -157,4 +160,4 @@ The Makefile allows you to keep old built archive.
 * clean_css: remove generated css files.
 
 * init_plugins: initialize plugins you need. Contains
-  cordova-plugin-screen-orientation for this project.
+  cordova-plugin-dialogs for this project.
