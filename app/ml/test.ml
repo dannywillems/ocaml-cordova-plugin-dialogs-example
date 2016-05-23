@@ -1,12 +1,12 @@
 let on_device_ready _ =
-  let d = Dialogs.t () in d#alert "Message ici"
+  let d = Cordova_dialogs.t () in d#alert "Hello in OCaml"
   (fun () ->
     d#confirm "A confirm box in OCaml"
     (fun x ->
       d#prompt ((match x with
-      | Ok -> "Ok "
-      | Cancel -> "Cancel "
-      | Back_button -> "Back button "
+      | Cordova_dialogs.Ok -> "Ok "
+      | Cordova_dialogs.Cancel -> "Cancel "
+      | Cordova_dialogs.Back_button -> "Back button "
       ) ^ "pressed")
       (fun x -> d#beep 1)
       ~title:"Hello world"
